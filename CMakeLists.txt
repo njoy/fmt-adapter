@@ -26,5 +26,5 @@ message( STATUS "-----------------------------------------------------------" )
 message( STATUS "" ) 
 
 add_library( fmt-adapter INTERFACE )
-target_include_directories( fmt-adapter INTERFACE src/fmt )
+target_include_directories( fmt-adapter INTERFACE src )
 
