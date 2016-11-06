@@ -1,6 +1,15 @@
 {
 "implementation_files": [],
-"is_external_project": true,
+"name": "fmt-adapter",
+"header_files": [
+"src/fmt/format.h",
+"src/fmt/ostream.h",
+"src/fmt/posix.h",
+"src/fmt/printf.h",
+"src/fmt/string.h",
+"src/fmt/time.h"
+],
+"target": "include",
 "unit_tests": {
 "src": [
 "src/test/assert-test.cc",
@@ -24,18 +33,9 @@
 "src/test/util.cc"
 ]
 },
-"version": "0.0.1",
-"target": "include",
-"include_path": "src",
-"header_files": [
-"src/fmt/format.h",
-"src/fmt/ostream.h",
-"src/fmt/posix.h",
-"src/fmt/printf.h",
-"src/fmt/string.h",
-"src/fmt/time.h"
-],
+"is_external_project": true,
 "language": "c++",
-"name": "fmt-adapter",
-"language_revision": "C++14"
+"language_revision": "C++14",
+"version": "0.0.1",
+"include_path": "src"
 }
