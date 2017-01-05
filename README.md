@@ -15,5 +15,5 @@ git subtree pull --prefix=src fmt master
 ```
 
 # License
-The code contained in this repository is covered by the license contained in the [LICENSE}(LICENSE) file.
+The code contained in this repository is covered by the license contained in the [LICENSE](LICENSE) file.
 
