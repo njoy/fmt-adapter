@@ -19,7 +19,7 @@ def pip_install(package, commit=None, **kwargs):
     except DistributionNotFound:
       pass
   if commit:
-    package = 'git+git://github.com/{0}.git@{1}'.format(package, commit)
+    package = 'git+https://github.com/{0}.git@{1}'.format(package, commit)
   print('Installing {0}'.format(package))
   check_call(['pip', 'install', package])
 
@@ -72,7 +72,8 @@ def build_docs(version='dev', **kwargs):
       GENERATE_MAN      = NO
       GENERATE_RTF      = NO
       CASE_SENSE_NAMES  = NO
-      INPUT             = {0}/format.h {0}/ostream.h {0}/printf.h {0}/string.h
+      INPUT             = {0}/container.h {0}/format.h {0}/ostream.h \
+                          {0}/printf.h {0}/string.h
       QUIET             = YES
       JAVADOC_AUTOBRIEF = YES
       AUTOLINK_SUPPORT  = NO

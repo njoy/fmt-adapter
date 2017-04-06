@@ -80,6 +80,7 @@ function(add_fmt_test name)
 endfunction()
 
 add_fmt_test(assert-test)
+add_fmt_test(container-test)
 add_fmt_test(gtest-extra-test)
 add_fmt_test(format-test)
 add_fmt_test(format-impl-test)
@@ -99,7 +100,7 @@ endif ()
 
 if (HAVE_OPEN)
   add_fmt_executable(posix-mock-test
-    posix-mock-test.cc ../fmt/format.cc ${TEST_MAIN_SRC})
+    posix-mock-test.cc ../fmt/format.cc ../fmt/printf.cc ${TEST_MAIN_SRC})
   target_include_directories(posix-mock-test PRIVATE ${PROJECT_SOURCE_DIR})
   target_compile_definitions(posix-mock-test PRIVATE FMT_USE_FILE_DESCRIPTORS=1)
   target_link_libraries(posix-mock-test gmock)
@@ -139,7 +140,7 @@ if (FMT_PEDANTIC)
     "${CMAKE_CURRENT_BINARY_DIR}/compile-test"
     --build-generator ${CMAKE_GENERATOR}
     --build-makeprogram ${CMAKE_MAKE_PROGRAM}
-    --build-options 
+    --build-options
     "-DCMAKE_CXX_COMPILER=${CMAKE_CXX_COMPILER}"
     "-DCPP11_FLAG=${CPP11_FLAG}"
     "-DSUPPORTS_USER_DEFINED_LITERALS=${SUPPORTS_USER_DEFINED_LITERALS}")
