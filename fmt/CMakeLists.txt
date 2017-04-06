@@ -1,7 +1,7 @@
 # Define the fmt library, its includes and the needed defines.
-# format.cc is added to FMT_HEADERS for the header-only configuration.
-set(FMT_HEADERS format.h format.cc ostream.h ostream.cc printf.h
-                string.h time.h)
+# *.cc are added to FMT_HEADERS for the header-only configuration.
+set(FMT_HEADERS container.h format.h format.cc ostream.h ostream.cc printf.h
+                printf.cc string.h time.h)
 if (HAVE_OPEN)
   set(FMT_HEADERS ${FMT_HEADERS} posix.h)
   set(FMT_SOURCES ${FMT_SOURCES} posix.cc)
@@ -16,7 +16,9 @@ if (FMT_CPPFORMAT)
 endif ()
 
 # Starting with cmake 3.1 the CXX_STANDARD property can be used instead.
-target_compile_options(fmt PUBLIC ${CPP11_FLAG})
+# Note: Don't make -std=c++11 public or interface, since it breaks projects
+# that use C++14.
+target_compile_options(fmt PRIVATE ${CPP11_FLAG})
 if (FMT_PEDANTIC)
   target_compile_options(fmt PRIVATE ${PEDANTIC_COMPILE_FLAGS})
 endif ()

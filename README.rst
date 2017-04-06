@@ -145,6 +145,8 @@ Projects using this library
 
 * `Keypirinha <http://keypirinha.com/>`_: A semantic launcher for Windows
 
+* `Kodi <https://kodi.tv/>`_ (formerly xbmc): Home theater software
+
 * `Lifeline <https://github.com/peter-clark/lifeline>`_: A 2D game
 
 * `MongoDB Smasher <https://github.com/duckie/mongo_smasher>`_: A small tool to generate randomized datasets
@@ -401,6 +403,11 @@ It only applies if you distribute the documentation of fmt.
 
 Acknowledgments
 ---------------
+
+The fmt library is maintained by Victor Zverovich (`vitaut <https://github.com/vitaut>`_)
+and Jonathan Müller (`foonathan <https://github.com/foonathan>`_) with contributions from many
+other people. See `Contributors <https://github.com/fmtlib/fmt/graphs/contributors>`_ and `Releases <https://github.com/fmtlib/fmt/releases>`_ for some of the names. Let us know if your contribution
+is not listed or mentioned incorrectly and we'll make it right.
 
 The benchmark section of this readme file and the performance tests are taken
 from the excellent `tinyformat <https://github.com/c42f/tinyformat>`_ library
