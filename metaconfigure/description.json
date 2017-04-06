@@ -1,41 +1,33 @@
 {
-"implementation_files": [],
-"name": "fmt-adapter",
-"header_files": [
-"src/fmt/format.h",
-"src/fmt/ostream.h",
-"src/fmt/posix.h",
-"src/fmt/printf.h",
-"src/fmt/string.h",
-"src/fmt/time.h"
-],
-"target": "include",
-"unit_tests": {
-"src": [
-"src/test/assert-test.cc",
-"src/test/custom-formatter-test.cc",
-"src/test/format-impl-test.cc",
-"src/test/format-test.cc",
-"src/test/gmock-gtest-all.cc",
-"src/test/gtest-extra-test.cc",
-"src/test/gtest-extra.cc",
-"src/test/header-only-test.cc",
-"src/test/header-only-test2.cc",
-"src/test/macro-test.cc",
-"src/test/ostream-test.cc",
-"src/test/posix-mock-test.cc",
-"src/test/posix-test.cc",
-"src/test/printf-test.cc",
-"src/test/string-test.cc",
-"src/test/test-main.cc",
-"src/test/time-test.cc",
-"src/test/util-test.cc",
-"src/test/util.cc"
-]
-},
-"is_external_project": true,
-"language": "c++",
-"language_revision": "C++14",
-"version": "0.0.1",
-"include_path": "src"
+  "file extension": {
+    "header files": [
+      "h++",
+      "hxx",
+      "hpp",
+      "hh"
+    ],
+    "implementation files": [
+      "c++",
+      "cxx",
+      "cpp",
+      "cc"
+    ]
+  },
+  "header files": [],
+  "ignore pattern": "",
+  "implementation files": [],
+  "include path": "src",
+  "initialized": true,
+  "is external project": true,
+  "language": "c++",
+  "name": "fmt-adapter",
+  "standards": [
+    "c++98",
+    "c++11",
+    "c++14"
+  ],
+  "strict": true,
+  "test pattern": "test",
+  "tests": {},
+  "update": false
 }
