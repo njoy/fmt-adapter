@@ -21,7 +21,7 @@
     "src/fmt/posix.h",
     "src/fmt/printf.h",
     "src/fmt/string.h",
-    "src/fmt/time.h"
+    "src/fmt/time.h",
     "src/fmt/format.cc",
     "src/fmt/ostream.cc",
     "src/fmt/posix.cc",
