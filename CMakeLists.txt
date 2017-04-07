@@ -46,4 +46,4 @@ target_sources( fmt-adapter INTERFACE
   "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/ostream.cc"
   "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/posix.cc"
   "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/printf.cc" )
-target_include_directories( fmt-adapter INTERFACE src/fmt )
+target_include_directories( fmt-adapter INTERFACE src )
