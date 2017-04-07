@@ -108,6 +108,7 @@ def evaluate_test_directory(state):
 
 def evaluate_directory(state):
     path = relative_path(state)
+    print(path)
     for group in state['file extension']:
         files = []
         for extension in state['file extension'][group]:
@@ -119,16 +120,22 @@ def evaluate_directory(state):
         state[group].extend(files)
 
     for name in os.listdir(os.getcwd()):
+        print(name)
         if os.path.isdir(os.path.join(os.getcwd(), name)):
+            print("is path")
             os.chdir(name)
             if not re.match(state['ignore pattern'], name):
                 if re.match(state['test pattern'], name):
+                    print("is test")
                     evaluate_test_directory(state)
                 else:
+                    print("is child")
                     evaluate_directory(state)
             else:
+                print("was ignored")
                 os.chdir('..')
-
+        else:
+            print("is not path")
     os.chdir('..')
 
 
