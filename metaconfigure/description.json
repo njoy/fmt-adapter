@@ -4,7 +4,8 @@
       "h++",
       "hxx",
       "hpp",
-      "hh"
+      "hh",
+      "h"
     ],
     "implementation files": [
       "c++",
@@ -13,14 +14,21 @@
       "cc"
     ]
   },
-  "header files": [],
-  "ignore pattern": "$^",
-  "implementation files": [
+  "header files": [
+    "src/fmt/container.h",
+    "src/fmt/format.h",
+    "src/fmt/ostream.h",
+    "src/fmt/posix.h",
+    "src/fmt/printf.h",
+    "src/fmt/string.h",
+    "src/fmt/time.h"
     "src/fmt/format.cc",
     "src/fmt/ostream.cc",
     "src/fmt/posix.cc",
-    "src/fmt/printf.cc"
+    "src/fmt/printf.cc"  
   ],
+  "ignore pattern": "$^",
+  "implementation files": [],
   "include path": "src",
   "initialized": true,
   "is external project": true,
