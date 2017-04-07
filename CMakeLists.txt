@@ -35,15 +35,15 @@ message( STATUS "-----------------------------------------------------------" )
 
 add_library( fmt-adapter INTERFACE )
 target_sources( fmt-adapter INTERFACE
-  "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/container.h",
-  "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/format.h",
-  "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/ostream.h",
-  "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/posix.h",
-  "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/printf.h",
-  "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/string.h",
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/container.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/format.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/ostream.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/posix.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/printf.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/string.h"
   "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/time.h"
-  "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/format.cc",
-  "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/ostream.cc",
-  "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/posix.cc",
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/format.cc"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/ostream.cc"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/posix.cc"
   "${CMAKE_CURRENT_SOURCE_DIR}/src/fmt/printf.cc" )
 target_include_directories( fmt-adapter INTERFACE src/fmt )
