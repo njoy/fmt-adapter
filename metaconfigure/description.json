@@ -1,5 +1,11 @@
 {
+  "configure files": [
+    "src/support/cmake/fmt-config.cmake.in"
+  ],
   "file extension": {
+    "configure files": [
+      "in"
+    ],
     "header files": [
       "h++",
       "hxx",
@@ -11,58 +17,60 @@
       "c++",
       "cxx",
       "cpp",
-      "cc"
+      "cc",
+      "C"
     ]
   },
   "header files": [
-    "src/fmt/container.h",
-    "src/fmt/format.h",
-    "src/fmt/ostream.h",
-    "src/fmt/posix.h",
-    "src/fmt/printf.h",
-    "src/fmt/string.h",
-    "src/fmt/time.h",
-    "src/fmt/format.cc",
-    "src/fmt/ostream.cc",
-    "src/fmt/posix.cc",
-    "src/fmt/printf.cc"  
+    "src/include/fmt/time.h",
+    "src/include/fmt/ostream.h",
+    "src/include/fmt/format-inl.h",
+    "src/include/fmt/ranges.h",
+    "src/include/fmt/core.h",
+    "src/include/fmt/colors.h",
+    "src/include/fmt/printf.h",
+    "src/include/fmt/posix.h",
+    "src/include/fmt/format.h"
   ],
   "ignore pattern": "$^",
-  "implementation files": [],
-  "include path": "src",
+  "implementation files": [
+    "src/src/posix.cc",
+    "src/src/format.cc"
+  ],
+  "include path": "src/",
   "initialized": true,
   "is external project": true,
   "language": "c++",
   "name": "fmt-adapter",
+  "standard": "c++17",
   "standards": [
     "c++98",
     "c++11",
-    "c++14"
+    "c++14",
+    "c++17"
   ],
   "strict": true,
   "test pattern": "test$",
   "tests": {
     "fmt-adapter": [
-      "src/test/assert-test.cc",
-      "src/test/container-test.cc",
-      "src/test/custom-formatter-test.cc",
-      "src/test/format-impl-test.cc",
-      "src/test/format-test.cc",
-      "src/test/gmock-gtest-all.cc",
-      "src/test/gtest-extra-test.cc",
       "src/test/gtest-extra.cc",
-      "src/test/header-only-test.cc",
-      "src/test/header-only-test2.cc",
-      "src/test/macro-test.cc",
+      "src/test/ranges-test.cc",
       "src/test/ostream-test.cc",
-      "src/test/posix-mock-test.cc",
-      "src/test/posix-test.cc",
-      "src/test/printf-test.cc",
-      "src/test/string-test.cc",
-      "src/test/test-main.cc",
       "src/test/time-test.cc",
+      "src/test/test-main.cc",
+      "src/test/custom-formatter-test.cc",
+      "src/test/gtest-extra-test.cc",
+      "src/test/header-only-test2.cc",
+      "src/test/util.cc",
+      "src/test/posix-test.cc",
+      "src/test/assert-test.cc",
+      "src/test/gmock-gtest-all.cc",
+      "src/test/posix-mock-test.cc",
+      "src/test/format-test.cc",
       "src/test/util-test.cc",
-      "src/test/util.cc"
+      "src/test/header-only-test.cc",
+      "src/test/printf-test.cc",
+      "src/test/format-impl-test.cc"
     ]
   },
   "update": false
